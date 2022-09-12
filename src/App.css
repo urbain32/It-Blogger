@@ -188,4 +188,30 @@ a{
 .blog-preview a{
   text-decoration: none;
 }
+/* ----Blog Detail---- */
+.blog-details {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid var(--color-white);
+  text-decoration: none;
+}
+.blog-details:hover {
+  box-shadow: var(--box-shadow);
+}
+.blog-details h2 {
+  color: var(--color-danger);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+/* .blog-details button {
+  background: var(--color-danger);
+  color: var(--color-white);
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+} */
 
