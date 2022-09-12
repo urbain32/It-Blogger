@@ -7,6 +7,7 @@
   --color-success: #41cfb6;
   --color-warning: #ffbb55;
   --color-white: #fff;
+
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
   --color-dark: #363949;
@@ -46,6 +47,7 @@ body {
   background: var(--color-white);
   user-select: none;
   overflow-x: hidden;
+  text-decoration: none;
 }
 
 .column {
@@ -171,13 +173,19 @@ a{
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid var(--color-white);
+  text-decoration: none;
 }
 .blog-preview:hover{
   box-shadow: var(--box-shadow);
+
 }
 .blog-preview h2{
   font-size: 1.4rem;
   color: var(--color-danger);
   margin-bottom: 8px;
+
+}
+.blog-preview a{
+  text-decoration: none;
 }
 
