@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import useFetch from '../../customHook/useFetch';
 import Spinner from '../layout/Spinner';
 const BlogDetail = () => {
@@ -9,6 +9,14 @@ const BlogDetail = () => {
     loading,
     error,
   } = useFetch('http://localhost:8000/blogs/' + id);
+  const history = useHistory();
+  const handleDelete = () => {
+    fetch('http://localhost:8000/blogs/' + blog.id, {
+      method:'DELETE'
+    }).then(() => {
+      history.push('/')
+    })
+  }
   return (
     <div className='blog-details'>
       {loading && <Spinner />}
@@ -18,6 +26,7 @@ const BlogDetail = () => {
           <h2>{blog.title}</h2>
           <p>written by {blog.author}</p>
           <div>{blog.body}</div>
+          <button onClick={handleDelete}>Delete</button>
         </article>
       )}
     </div>
